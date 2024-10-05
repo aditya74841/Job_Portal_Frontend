@@ -157,7 +157,7 @@ const Navbar = () => {
         <div>
           <Link to="/">
             <h1 className="text-2xl font-bold ml-2 cursor-pointer">
-              Job<span className="text-[#F83002]">Portal</span>
+              Naukr<span className="text-[#F83002]">iii</span>
             </h1>
           </Link>
         </div>

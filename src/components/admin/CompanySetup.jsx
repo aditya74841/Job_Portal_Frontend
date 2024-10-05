@@ -10,11 +10,13 @@ import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "sonner";
 import { useSelector } from "react-redux";
 import useGetCompanyById from "@/hooks/useGetCompanyById";
-import { Textarea } from "@/components/ui/textarea"
-
+import { Textarea } from "@/components/ui/textarea";
 
 const CompanySetup = () => {
   const params = useParams();
+  useEffect(() => {}, []);
+
+  // console.log("The params id is", params.id);
   useGetCompanyById(params.id);
   const [input, setInput] = useState({
     name: "",
@@ -24,6 +26,7 @@ const CompanySetup = () => {
     file: null,
   });
   const { singleCompany } = useSelector((store) => store.company);
+  console.log("The Single Company is", singleCompany);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
